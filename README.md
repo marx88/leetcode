@@ -2,8 +2,5 @@
 记录每天刷`leetcode`的👣
 
 ### 题库列表
-
-##### 一、两数之和
-- [笔记](./code/00001-two-sum/README.md)
-- [GO实现](./code/00001-two-sum/code.go)
+1. [两数之和](code/00001-two-sum/README.md) `2020年12月6日`
 
