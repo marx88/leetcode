@@ -1,18 +1,9 @@
 <?php
-class ListNode
-{
-    public $val = 0;
-    public $next = null;
-    public function __construct($val = 0, $next = null)
-    {
-        $this->val = $val;
-        $this->next = $next;
-    }
-}
 
-class Solution
-{
+namespace leetcode\lc00002;
 
+class AddTwoNumbers
+{
     /**
      * @param ListNode $l1
      * @param ListNode $l2
@@ -38,7 +29,3 @@ class Solution
         return $first;
     }
 }
-
-$l1 = new ListNode(2, new ListNode(4, new ListNode(9)));
-$l2 = new ListNode(5, new ListNode(6, new ListNode(4, new ListNode(9))));
-print_r((new Solution())->addTwoNumbers($l1, $l2));

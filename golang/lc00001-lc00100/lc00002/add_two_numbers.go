@@ -1,44 +1,9 @@
-package main
-
-import (
-	"log"
-)
+package lc00002
 
 // ListNode 结点
 type ListNode struct {
 	Val  int
 	Next *ListNode
-}
-
-func main() {
-	l1 := &ListNode{
-		2,
-		&ListNode{
-			4,
-			&ListNode{
-				9,
-				nil,
-			},
-		},
-	}
-	l2 := &ListNode{
-		5,
-		&ListNode{
-			6,
-			&ListNode{
-				4,
-				&ListNode{
-					9,
-					nil,
-				},
-			},
-		},
-	}
-	t := addTwoNumbers(l1, l2)
-	for t != nil {
-		log.Println(*t)
-		t = t.Next
-	}
 }
 
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {

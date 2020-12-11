@@ -1,5 +1,8 @@
 <?php
-class Solution
+
+namespace leetcode\lc00003;
+
+class LongestSubstringWithoutRepeatingCharacters
 {
     /**
      * @param String $s
@@ -19,5 +22,3 @@ class Solution
         return $m;
     }
 }
-
-echo (new Solution())->lengthOfLongestSubstring('pwwkew');

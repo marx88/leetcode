@@ -1,0 +1,15 @@
+{
+    "name": "marx/leetcode",
+    "description": "leetcode",
+    "require": {
+        "phpunit/phpunit": "8.5.13"
+    },
+    "autoload": {
+        "psr-4": {
+            "leetcode\\":["lc00001-lc00100/"]
+        }
+    },
+    "scripts": {
+        "test": "phpunit --configuration phpunit.xml"
+    }
+}
