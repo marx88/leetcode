@@ -50,7 +50,7 @@
 
 ### 代码实现
 - [GO](../../../golang/lc00001-lc00100/lc00004/median_of_two_sorted_arrays.go) **2091 / 2091** 个通过测试用例；执行用时: **16 ms**；内存消耗: **5.3 MB**；
-- [PHP](../../../php/lc00001-lc00100/lc00004/MedianOfTwoSortedArrays.php) **2091 / 2091** 个通过测试用例；执行用时: **16 ms**；内存消耗: **15.3 MB**；
+- [PHP](../../../php/lc00001-lc00100/lc00004/MedianOfTwoSortedArrays.php) **2091 / 2091** 个通过测试用例；执行用时: **32 ms**；内存消耗: **15.5 MB**；
 
 
 ### 心里路程
