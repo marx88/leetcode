@@ -10,6 +10,7 @@ type caseType struct {
 }
 
 var cases = []caseType{
+	{"abcd", "a"},
 	{"babad", "bab"},
 	{"cbbd", "bb"},
 	{"civilwartestingwhetherthatnaptionoranynartionsoconceivedandsodedicatedcanlongendureWeareqmetonagreatbattlefiemldoftzhatwarWehavecometodedicpateaportionofthatfieldasafinalrestingplaceforthosewhoheregavetheirlivesthatthatnationmightliveItisaltogetherfangandproperthatweshoulddothisButinalargersensewecannotdedicatewecannotconsecratewecannothallowthisgroundThebravelmenlivinganddeadwhostruggledherehaveconsecrateditfaraboveourpoorponwertoaddordetractTgheworldadswfilllittlenotlenorlongrememberwhatwesayherebutitcanneverforgetwhattheydidhereItisforusthelivingrathertobededicatedheretotheulnfinishedworkwhichtheywhofoughtherehavethusfarsonoblyadvancedItisratherforustobeherededicatedtothegreattdafskremainingbeforeusthatfromthesehonoreddeadwetakeincreaseddevotiontothatcauseforwhichtheygavethelastpfullmeasureofdevotionthatweherehighlyresolvethatthesedeadshallnothavediedinvainthatthisnationunsderGodshallhaveanewbirthoffreedomandthatgovernmentofthepeoplebythepeopleforthepeopleshallnotperishfromtheearth", "ranynar"},
@@ -40,6 +41,15 @@ func TestManacher(t *testing.T) {
 		result := manacher(c.s)
 		if result != c.excepted {
 			t.Fatalf("manacher function failed, s: %s, execpted: %s, result: %s", c.s, c.excepted, result)
+		}
+	}
+}
+
+func TestDynamic(t *testing.T) {
+	for _, c := range cases {
+		result := dynamic(c.s)
+		if result != c.excepted {
+			t.Fatalf("dynamic function failed, s: %s, execpted: %s, result: %s", c.s, c.excepted, result)
 		}
 	}
 }

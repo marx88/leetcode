@@ -30,17 +30,12 @@ func reverseString(str string) string {
 func centerSpread(s string) string {
 	var l, r, i, si, mLen int
 	for sLen := len(s); i < sLen; {
-		l, r = i-1, i
-
 		// 下面这个循环解决奇偶回文长度问题 同时优化了N个重复字符问题
-		for r < sLen && s[i] == s[r] {
-			r++
+		for l, r = i-1, i; r < sLen && s[i] == s[r]; r++ {
 		}
-		i = r
 
 		// 中心扩散
-		for l >= 0 && r < sLen && s[l] == s[r] {
-			l, r = l-1, r+1
+		for i = r; l >= 0 && r < sLen && s[l] == s[r]; l, r = l-1, r+1 {
 		}
 
 		// 判断是否新的最大回文
@@ -93,4 +88,22 @@ func manacher(s string) string {
 		}
 	}
 	return s[sIdx : sIdx+maxLen]
+}
+
+// ==================== 动态规划算法 ====================
+
+func dynamic(s string) string {
+	// 阶段：当前索引求最大回文
+	// 状态：以当前索引为中心点向两侧扩散
+	// 状态转移决策：如果扩散后左右字符一致则继续扩散，否则判断是否新的最长回文，索引自增然后转移到下一个阶段
+	si, ml := 0, 0
+	for ln, i, l, r := 2*len(s)+1, 1, 0, 0; i < ln; i++ { // 2倍长度参考了Manacher算法的辅助字符原理，来规避回文长度奇偶问题
+		for l, r = i-1-i%2, i+1+i%2; l >= 0 && r < ln && (r%2 == 0 || s[l/2] == s[r/2]); l, r = l-2, r+2 {
+		}
+		if ml < i-(l+1) {
+			si = (l + 2) / 2
+			ml = i - (l + 1)
+		}
+	}
+	return s[si : si+ml]
 }
