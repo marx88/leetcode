@@ -6,3 +6,4 @@
 2. [两数相加](doc/lc00001-lc00100/lc00002/add_two_numbers.md) `2020年12月7日`
 3. [无重复字符串最长子串](doc/lc00001-lc00100/lc00003/longest_substring_without_repeating_characters.md) `2020年12月7日`
 4. [寻找两个正序数组的中位数](doc/lc00001-lc00100/lc00004/median_of_two_sorted_arrays.md) `2020年12月8-11日`
+5. [最长回文子串](doc/lc00001-lc00100/lc00005/longest-palindromic-substring.md) `2020年12月12-14日`
